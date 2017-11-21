@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Ldatabase">
+  <DataContextMoniker Name="/LdatabaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="de4e2dc5-bed2-4fe4-a7bc-64269ce28884" absoluteBounds="3.125, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LdatabaseDataContext/AreaTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2dbaf891-00e3-478c-9c59-655a00aca359" absoluteBounds="3.14, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1dbcad22-5644-4f74-8ad0-aa4ead1908c3" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LdatabaseDataContext/CategoryTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f4a867b-1546-4072-a00a-70a3dbe8c816" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14f1c94e-079d-4880-9586-7fc6d8e160c3" absoluteBounds="0.625, 2.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/LdatabaseDataContext/ItemTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03708292-c244-499b-9bd5-c6a818d07a67" absoluteBounds="0.64000000000000012, 3.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.28125 : 1.69399251302083); (3.28125 : 4.46079752604167); (2.625 : 4.46079752604167)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LdatabaseDataContext/AreaTable/AreaTable_ItemTable" />
+      <nodes>
+        <classShapeMoniker Id="de4e2dc5-bed2-4fe4-a7bc-64269ce28884" />
+        <classShapeMoniker Id="14f1c94e-079d-4880-9586-7fc6d8e160c3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5625 : 1.69399251302083); (1.5625 : 2.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LdatabaseDataContext/CategoryTable/CategoryTable_ItemTable" />
+      <nodes>
+        <classShapeMoniker Id="1dbcad22-5644-4f74-8ad0-aa4ead1908c3" />
+        <classShapeMoniker Id="14f1c94e-079d-4880-9586-7fc6d8e160c3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ae6a39ba-e08d-4ac3-8ec9-bafc38410f46" absoluteBounds="3.5, 2.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LdatabaseDataContext/LoginTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27424d64-e10e-4b54-9ebf-3e7275b81c82" absoluteBounds="3.515, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

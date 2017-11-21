@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="LdatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" SettingsObjectName="Finder.Properties.Settings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AreaTable" Member="AreaTables">
+    <Type Name="AreaTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AreaTable_ItemTable" Member="ItemTables" ThisKey="Name" OtherKey="Area" Type="ItemTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoryTable" Member="CategoryTables">
+    <Type Name="CategoryTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CategoryTable_ItemTable" Member="ItemTables" ThisKey="Name" OtherKey="Category" Type="ItemTable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ItemTable" Member="ItemTables">
+    <Type Name="ItemTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="Phone_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Area" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="AreaTable_ItemTable" Member="AreaTable" ThisKey="Area" OtherKey="Name" Type="AreaTable" IsForeignKey="true" />
+      <Association Name="CategoryTable_ItemTable" Member="CategoryTable" ThisKey="Category" OtherKey="Name" Type="CategoryTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginTable" Member="LoginTables">
+    <Type Name="LoginTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="PassWord" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
